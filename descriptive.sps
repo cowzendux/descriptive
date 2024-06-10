@@ -17,7 +17,7 @@
      Returns 0 for VALID if there are no valid cases in the dataset
 
 set printback=off.
-begin program python.
+BEGIN PROGRAM PYTHON3.
 import spss, spssaux, os
 
 def descriptive(variable, stat):
@@ -74,7 +74,7 @@ def descriptive(variable, stat):
 		handle,
 		tableSubtype="Statistics",
 		cellAttrib="text")
-          if (float(result[0]) <> 0 and len(result) > 2):
+          if (float(result[0]) != 0 and len(result) > 2):
                return float((result[2]))
 
 end program python.
